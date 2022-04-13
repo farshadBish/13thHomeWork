@@ -84,12 +84,12 @@ The user should be able to see the list of tasks, add new ones, delete existing 
                 - Use the document.createElement to create the new List Item
                 - Append the LI child to the UL
             */
-           function addaLi(content){
+           function addNewTask(){
              let ulNode = document.getElementById('myTaskList');
              let liNode = document.createElement('li');
-             liNode.innerHTML = `${content}`;
+             let newTask = document.getElementById("newTask")
              ulNode.appendChild(liNode);
-
+             liNode.innerHTML = newTask.value
            }
       /* EXERCISE 6: 
                 Create a method "removeLast" which removes the last item from the task list
